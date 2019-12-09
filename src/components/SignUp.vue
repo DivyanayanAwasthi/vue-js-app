@@ -25,16 +25,18 @@ export default {
   name: 'SignUp',
 data() {
         return {  
-          user: {"username":"","password":""}
+          user: {"username":"samenda","password":"samenda"}
         }
       },
 methods: {
     formSubmit(e) {
       console.log(this.user.username)
       axios.post('http://localhost:8082/signup', {
-  name: this.user.username
+  name: this.user.username,
+  company: this.user.password
 })
         .then((resp) => {
+          this.user=resp.data
           console.log(resp)
         })
         .catch((err) => {
@@ -44,3 +46,6 @@ methods: {
 }
 }
 </script>
+<style scoped>
+
+</style>

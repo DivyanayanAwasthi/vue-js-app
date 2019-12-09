@@ -1,7 +1,7 @@
 
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h1>{{ helloMessage }}</h1>
   </div>
 </template>
 
@@ -10,7 +10,7 @@
     name: 'Hello',
     data () {
       return {
-        msg: 'Welcome to Crypto Info'
+        helloMessage: 'This is the Login Component'
       }
     }
   }
